@@ -1,0 +1,63 @@
+/* Portugol:
+ * Crie um algoritmo que pergunte um número inteiro e
+ * calcule a soma e num5 = 1+2+3+4+5=15
+ * a multiplicação de todos os números de uma sequência iniciando em 1 até o número definido.
+ * num5 = 1*2*3*4*5=120
+ */
+
+programa
+{
+funcao inicio()
+{
+//Variáveis
+inteiro num, i, soma, fatorial, resultado=1
+cadeia texto = ""
+cadeia texto2 = ""
+escreva("Digite um número (>1): ")
+leia(num)
+soma=0
+i=1
+//Cálculos e Exibições
+para (i=1; i<=num; i++)
+{
+se (i==num)
+{
+texto=texto + i
+}
+senao
+{
+texto=texto + i + "+"
+}
+soma=soma+i
+}
+escreva("\nA soma dos primeiros inteiros positivos até ",num," é: ", soma,"\n")
+escreva (num, " = ", texto, " = ", soma, "\n")
+
+para (fatorial = num; fatorial >= 1; fatorial--)
+{
+   se(fatorial == 1)
+   {
+       texto2 = texto2 + fatorial
+   }
+   senao
+   {
+       texto2 = texto2 + fatorial + "x"
+   }
+   resultado = resultado * fatorial
+}
+escreva ("\nO fatorial de ", num, " é: ",resultado,  "\n")
+escreva (num, "! = ", texto2, " = ", resultado, "\n")
+}
+}
+
+/*_______________________________________________________________________________________
+Digite um número (>1): 5
+
+A soma dos primeiros inteiros positivos até 5 é: 15
+5 = 1+2+3+4+5 = 15
+
+O fatorial de 5 é: 120
+5! = 5x4x3x2x1 = 120
+
+Programa finalizado. Tempo de execução: 3528 milissegundos
+_________________________________________________________________________________________*/ 
